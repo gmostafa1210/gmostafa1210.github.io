@@ -1,20 +1,10 @@
 TY  - CONF
-TI  - Detecting Lung Cancer with Federated and Transfer Learning
-T2  - 2023 26th International Conference on Computer and Information Technology (ICCIT)
-SP  - 1
-EP  - 6
-AU  - G. Mostafa
-AU  - M. S. Hamidi
-AU  - D. M. Farid
-PY  - 2023
-DO  - 10.1109/ICCIT60459.2023.10441256
-JO  - 2023 26th International Conference on Computer and Information Technology (ICCIT)
-IS  - 
-SN  - 
-VO  - 
-VL  - 
-JA  - 2023 26th International Conference on Computer and Information Technology (ICCIT)
-Y1  - 13-15 Dec. 2023
+T1  - Improve the Sentiment of Bengali Language Texts with Stopword Removal
+A1  - Mostafa, G
+A1  - Ahamed, Md Sabbir
+A1  - Morol, Md Kishor
+JO  - Proceedings of the 3rd International Conference on Computing Advancements
+SP  - 414
+EP  - 422
+Y1  - 2024
 ER  - 
-
-
