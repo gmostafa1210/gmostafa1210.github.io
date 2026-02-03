@@ -7,7 +7,6 @@ import Education from "@/components/Education";
 import Publications from "@/components/Publications";
 import Interests from "@/components/Interests";
 import PhotoGallery from "@/components/PhotoGallery";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -23,7 +22,6 @@ const Index = () => {
         <Publications />
         <Interests />
         <PhotoGallery />
-        <Footer />
       </main>
     </div>
   );

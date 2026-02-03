@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import profileImage from "@/assets/profile.png";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -62,6 +63,11 @@ const Sidebar = () => {
           </a>
         ))}
       </nav>
+
+      {/* Theme Toggle */}
+      <div className="mt-auto pt-8">
+        <ThemeToggle />
+      </div>
     </aside>
   );
 };
