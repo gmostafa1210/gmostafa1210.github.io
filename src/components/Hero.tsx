@@ -60,7 +60,7 @@ const Hero = () => {
               className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
             >
               <a
-                href="https://gmostafa1210.github.io/files/GolamMostafa.pdf"
+                href="/files/GolamMostafa.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
