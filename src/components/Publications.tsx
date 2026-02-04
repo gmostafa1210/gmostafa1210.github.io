@@ -10,7 +10,7 @@ const publications = [
     venue: "3rd International Conference on Computing Advancements (ICCA 2024)",
     publisher: "ACM",
     pages: "414-422",
-    pdfUrl: "https://gmostafa1210.github.io/paper/mostafa2024/mostafa2024.pdf",
+    pdfUrl: "/files/mostafa2024.pdf",
     researchGateUrl: "https://www.researchgate.net/publication/384667789_Improve_the_Sentiment_of_Bengali_Language_Texts_with_Stopword_Removal",
   },
   {
@@ -21,7 +21,7 @@ const publications = [
     venue: "26th International Conference on Computer and Information Technology (ICCIT 2023)",
     publisher: "IEEE",
     pages: "1-6",
-    pdfUrl: "https://gmostafa1210.github.io/paper/mostafa2023/mostafa2023.pdf",
+    pdfUrl: "/files/mostafa2023.pdf",
     researchGateUrl: "https://www.researchgate.net/publication/378537154_Detecting_Lung_Cancer_with_Federated_and_Transfer_Learning",
   },
   {
@@ -32,7 +32,7 @@ const publications = [
     venue: "International Journal of Information Technology and Computer Science (IJITCS), Vol.13, No.2",
     publisher: "MECS Press",
     pages: "38-48",
-    pdfUrl: "https://gmostafa1210.github.io/paper/mostafa2021/mostafa2021.pdf",
+    pdfUrl: "/files/mostafa2021.pdf",
     researchGateUrl: "https://www.researchgate.net/publication/350725872_Investigation_of_Different_Machine_Learning_Algorithms_to_Determine_Human_Sentiment_Using_Twitter_Data",
   },
 ];
