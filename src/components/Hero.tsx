@@ -47,10 +47,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Hi! I am Mostafa. A tech lover with big dreams. I love to take on
-            challenges and learn new things every day to keep myself updated.
-            Currently working as a full-time <span className="text-primary font-medium">Odoo Developer</span>.
-            Feel free to ping me for any kind of relevant query. Peace!
+            Hi! I'm Mostafa, a passionate tech enthusiast and dedicated <span className="text-primary font-medium">Odoo Developer</span> based in Dhaka, Bangladesh. I love solving real-world problems through clean, efficient code and always strive to learn something new every day. Alongside my professional work, I have a strong passion for <span className="text-primary font-medium">Machine Learning and Artificial Intelligence</span>, and I enjoy exploring how intelligent systems can create smarter, more impactful solutions. Currently working full-time in Odoo development, I enjoy taking on challenges, building solutions, and collaborating with others to bring ideas to life. Feel free to reach out if you'd like to connect or work together!
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
