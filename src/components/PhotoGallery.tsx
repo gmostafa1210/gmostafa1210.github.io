@@ -40,14 +40,14 @@ const photoSections = [
   {
     title: "Cox's Bazar Sea Beach",
     date: "March 2023",
-    images: ["/files/img/5coxsb23/coxs1.jpg"],
+    images: ["/files/img/5coxsbazar2023/coxs1.jpg"],
   },
   {
     title: "Kuakata Sea Beach Tour",
     date: "January 2021",
     images: [
-      "/files/img/6kuakata21/kuakata1.jpg",
-      "/files/img/6kuakata21/kuakata2.jpg",
+      "/files/img/6kuakata2021/kuakata1.jpg",
+      "/files/img/6kuakata2021/kuakata2.jpg",
     ],
   },
 ];
