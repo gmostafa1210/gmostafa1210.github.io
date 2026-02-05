@@ -6,48 +6,48 @@ const photoSections = [
     title: "Undergraduate Convocation",
     date: "January 2020",
     images: [
-      "https://gmostafa1210.github.io/img/bsc/slide11.jpg",
-      "https://gmostafa1210.github.io/img/bsc/slide12.jpg",
+      "/files/img/1undergraduate2020/undergraduate1.jpg",
+      "/files/img/1undergraduate2020/undergraduate2.jpg",
     ],
   },
   {
     title: "Run for Fun",
     date: "",
     images: [
-      "https://gmostafa1210.github.io/img/run/runjan26.jpeg",
-      "https://gmostafa1210.github.io/img/run/rundec24.jpeg",
-      "https://gmostafa1210.github.io/img/run/runnov24.jpeg",
-      "https://gmostafa1210.github.io/img/run/runoct24.jpeg",
-      "https://gmostafa1210.github.io/img/run/runsep24.jpeg",
+      "files/img/2run/1runjan26.jpeg",
+      "files/img/2run/rundec24.jpeg",
+      "files/img/2run/runnov24.jpeg",
+      "files/img/2run/runoct24.jpeg",
+      "files/img/2run/runsep24.jpeg",
     ],
   },
   {
     title: "Kaalmegha Country Club & Resort",
     date: "February 2025",
     images: [
-      "https://gmostafa1210.github.io/img/kalmegha25/slide11.jpg",
-      "https://gmostafa1210.github.io/img/kalmegha25/slide12.jpg",
+      "files/img/3kalmegha25/kalmegha1.jpg",
+      "files/img/3kalmegha25/kalmegha2.jpg",
     ],
   },
   {
     title: "Saint Martin Tour",
     date: "January 2024",
     images: [
-      "https://gmostafa1210.github.io/img/saintmartin24/slide11.jpg",
-      "https://gmostafa1210.github.io/img/saintmartin24/slide12.jpg",
+      "files/img/4saintmartin24/saintmartin1.jpg",
+      "files/img/4saintmartin24/saintmartin2.jpg",
     ],
   },
   {
     title: "Cox's Bazar Sea Beach",
     date: "March 2023",
-    images: ["https://gmostafa1210.github.io/img/coxsb23/coxs1.jpg"],
+    images: ["files/img/5coxsb23/coxs1.jpg"],
   },
   {
     title: "Kuakata Sea Beach Tour",
     date: "January 2021",
     images: [
-      "https://gmostafa1210.github.io/img/kuakata21/kuakata1.jpg",
-      "https://gmostafa1210.github.io/img/kuakata21/kuakata2.jpg",
+      "files/img/6kuakata21/kuakata1.jpg",
+      "files/img/6kuakata21/kuakata2.jpg",
     ],
   },
 ];
