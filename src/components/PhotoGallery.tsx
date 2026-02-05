@@ -15,39 +15,39 @@ const photoSections = [
     date: "",
     images: [
       "files/img/2run/1runjan26.jpeg",
-      "files/img/2run/rundec24.jpeg",
-      "files/img/2run/runnov24.jpeg",
-      "files/img/2run/runoct24.jpeg",
-      "files/img/2run/runsep24.jpeg",
+      "files/img/2run/2rundec24.jpeg",
+      "files/img/2run/3runnov24.jpeg",
+      "files/img/2run/4runoct24.jpeg",
+      "files/img/2run/5runsep24.jpeg",
     ],
   },
   {
     title: "Kaalmegha Country Club & Resort",
     date: "February 2025",
     images: [
-      "files/img/3kalmegha25/kalmegha1.jpg",
-      "files/img/3kalmegha25/kalmegha2.jpg",
+      "/files/img/3kalmegha2025/kalmegha1.jpg",
+      "/files/img/3kalmegha2025/kalmegha2.jpg",
     ],
   },
   {
     title: "Saint Martin Tour",
     date: "January 2024",
     images: [
-      "files/img/4saintmartin24/saintmartin1.jpg",
-      "files/img/4saintmartin24/saintmartin2.jpg",
+      "/files/img/4saintmartin2024/saintmartin1.jpg",
+      "/files/img/4saintmartin2024/saintmartin2.jpg",
     ],
   },
   {
     title: "Cox's Bazar Sea Beach",
     date: "March 2023",
-    images: ["files/img/5coxsb23/coxs1.jpg"],
+    images: ["/files/img/5coxsb23/coxs1.jpg"],
   },
   {
     title: "Kuakata Sea Beach Tour",
     date: "January 2021",
     images: [
-      "files/img/6kuakata21/kuakata1.jpg",
-      "files/img/6kuakata21/kuakata2.jpg",
+      "/files/img/6kuakata21/kuakata1.jpg",
+      "/files/img/6kuakata21/kuakata2.jpg",
     ],
   },
 ];
