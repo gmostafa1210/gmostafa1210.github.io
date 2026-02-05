@@ -4,10 +4,9 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode, command }) => ({
-  // For GitHub Pages: set base to repo name (e.g., '/repo-name/')
-  // For local dev or other hosting: use '/'
-  base: command === "build" ? "./" : "/",
+export default defineConfig(({ mode }) => ({
+  // For username.github.io sites, base is always "/"
+  base: "/",
   server: {
     host: "::",
     port: 8080,
