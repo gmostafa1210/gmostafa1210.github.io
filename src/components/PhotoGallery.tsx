@@ -12,7 +12,7 @@ const photoSections = [
   },
   {
     title: "Run for Fun",
-    date: "2024 - 2025",
+    date: "",
     images: [
       "https://gmostafa1210.github.io/img/run/runjan26.jpeg",
       "https://gmostafa1210.github.io/img/run/rundec24.jpeg",
