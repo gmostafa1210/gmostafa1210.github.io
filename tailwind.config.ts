@@ -61,6 +61,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // IDE specific
+        titlebar: "hsl(var(--titlebar))",
+        "tab-active": "hsl(var(--tab-active))",
+        "tab-inactive": "hsl(var(--tab-inactive))",
+        "tab-border": "hsl(var(--tab-border))",
+        statusbar: "hsl(var(--statusbar))",
+        "statusbar-foreground": "hsl(var(--statusbar-foreground))",
+        "line-number": "hsl(var(--line-number))",
+        "line-active": "hsl(var(--line-active))",
       },
       borderRadius: {
         lg: "var(--radius)",
