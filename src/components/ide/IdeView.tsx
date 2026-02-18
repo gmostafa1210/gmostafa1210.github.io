@@ -1,5 +1,6 @@
 import { useState } from "react";
 import IdeSidebar from "./IdeSidebar";
+import IdeMobileNav from "./IdeMobileNav";
 import TabBar from "./TabBar";
 import StatusBar from "./StatusBar";
 import AboutSection, { ABOUT_LINE_COUNT } from "./sections/AboutSection";
@@ -63,7 +64,8 @@ const IdeView = () => {
           <IdeSidebar activeFile={activeFile} onFileClick={handleFileClick} />
         </div>
 
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 flex flex-col overflow-hidden relative">
+          <IdeMobileNav activeFile={activeFile} onFileClick={handleFileClick} />
           <TabBar activeFile={activeFile} openTabs={openTabs} onFileClick={handleFileClick} onCloseTab={handleCloseTab} />
 
           <div className="flex-1 overflow-auto bg-background">
