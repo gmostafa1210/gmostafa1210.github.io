@@ -6,11 +6,10 @@ const publications = [
     venue: "3rd International Conference on Computing Advancements (ICCA 2024)",
     publisher: "ACM",
     pages: "414-422",
-    year: 2024,
     date: "October 17, 2024",
     doi: "10.1145/3723178.3723233",
     links: {
-      paper: "/files/mostafa2024.pdf",
+      paper: "https://mostafa.bd/files/mostafa2024.pdf",
       researchgate: "https://www.researchgate.net/publication/384667789",
     },
   },
@@ -19,11 +18,10 @@ const publications = [
     venue: "26th International Conference on Computer and Information Technology (ICCIT 2023)",
     publisher: "IEEE",
     pages: "1-6",
-    year: 2023,
     date: "February 27, 2024",
     doi: "10.1109/ICCIT60459.2023.10441256",
     links: {
-      paper: "/files/mostafa2023.pdf",
+      paper: "https://mostafa.bd/files/mostafa2023.pdf",
       researchgate: "https://www.researchgate.net/publication/378537154",
     },
   },
@@ -32,11 +30,10 @@ const publications = [
     venue: "International Journal of Information Technology and Computer Science (IJITCS), Vol.13, No.2",
     publisher: "MECS Press",
     pages: "38-48",
-    year: 2021,
     date: "April 08, 2021",
     doi: "10.5815/ijitcs.2021.02.04",
     links: {
-      paper: "/files/mostafa2021.pdf",
+      paper: "https://mostafa.bd/files/mostafa2021.pdf",
       researchgate: "https://www.researchgate.net/publication/350725872",
     },
   },
@@ -57,7 +54,7 @@ const PublicationsSection = () => {
       {publications.map((pub, i) => (
         <div key={i}>
           <CodeLine lineNumber={line++}>
-            <span className="syntax-keyword">@article</span><span className="syntax-punctuation">{"{"}</span><span className="syntax-function">mostafa{pub.year}</span><span className="syntax-punctuation">,</span>
+            <span className="syntax-keyword">@article</span><span className="syntax-punctuation">{"{"}</span><span className="syntax-function">mostafa{pub.date.split(", ")[1]}</span><span className="syntax-punctuation">,</span>
           </CodeLine>
           <CodeLine lineNumber={line++} indent={1}>
             <span className="syntax-tag">title</span> <span className="syntax-operator">=</span>{" "}
