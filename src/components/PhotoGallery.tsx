@@ -14,11 +14,12 @@ const photoSections = [
     title: "Run for Fun",
     date: "",
     images: [
-      "files/img/2run/1runjan26.jpeg",
-      "files/img/2run/2rundec24.jpeg",
-      "files/img/2run/3runnov24.jpeg",
-      "files/img/2run/4runoct24.jpeg",
-      "files/img/2run/5runsep24.jpeg",
+      "/files/img/2run/1runsep24.jpeg",
+      "/files/img/2run/2runoct24.jpeg",
+      "/files/img/2run/3runnov24.jpeg",
+      "/files/img/2run/4rundec24.jpeg",
+      "/files/img/2run/5runjan26.jpeg",
+      "/files/img/2run/6runmay26.jpeg",
     ],
   },
   {

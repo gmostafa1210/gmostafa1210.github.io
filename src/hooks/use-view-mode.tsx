@@ -15,7 +15,7 @@ export const ViewModeProvider = ({ children }: { children: ReactNode }) => {
       const stored = localStorage.getItem("viewMode");
       if (stored === "classic" || stored === "ide") return stored;
     }
-    return "ide";
+    return "classic";
   });
 
   useEffect(() => {
