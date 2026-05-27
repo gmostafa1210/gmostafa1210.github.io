@@ -9,7 +9,7 @@
 <!-- Firebase -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getDatabase, ref, set, get, onValue, update, push } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+  import { getDatabase, ref, set, get, onValue, update, push, remove } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyA6HMlJAQrEF-oMu_rDsqZp6fUi1X6Z5f0",
@@ -264,11 +264,13 @@
       document.getElementById('over-secrets').innerHTML =
         `<p>Your secret: <strong>${myRole === 'A' ? room.playerA.secret : room.playerB.secret}</strong></p>
          <p>Opponent's secret: <strong>${myRole === 'A' ? room.playerB.secret : room.playerA.secret}</strong></p>`;
+      remove(ref(db, `rooms/${roomId}`));  // clean up room from Firebase
     });
     show('over');
   }
 
   document.getElementById('btn-play-again').addEventListener('click', () => {
+    if (roomId) remove(ref(db, `rooms/${roomId}`));  // safety cleanup if not already removed
     roomId = null; myRole = null; mySecret = null;
     if (gameUnsubscribe) gameUnsubscribe();
     show('landing');
