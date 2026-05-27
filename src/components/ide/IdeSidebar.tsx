@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileCode, FileJson, FileText, Terminal, Braces, ChevronDown, ChevronRight, Mail, Github, Linkedin, FileDown } from "lucide-react";
+import { FileCode, FileJson, FileText, Terminal, Braces, ChevronDown, ChevronRight, Mail, Github, Linkedin, FileDown, Gamepad2 } from "lucide-react";
 
 type FileItem = {
   name: string;
@@ -14,6 +14,7 @@ const files: FileItem[] = [
   { name: "education.md", icon: <FileText size={16} className="syntax-variable" />, id: "education" },
   { name: "publications.bib", icon: <Braces size={16} className="syntax-number" />, id: "publications" },
   { name: "contact.sh", icon: <Terminal size={16} className="syntax-string" />, id: "contact" },
+  { name: "games.html", icon: <Gamepad2 size={16} className="syntax-tag" />, id: "games" },
 ];
 
 interface IdeSidebarProps {

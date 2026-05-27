@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Publications from "@/components/Publications";
 import PhotoGallery from "@/components/PhotoGallery";
+import Games from "@/components/Games";
 import IdeView from "@/components/ide/IdeView";
 import ViewModeToggle from "@/components/ViewModeToggle";
 
@@ -34,6 +35,7 @@ const Index = () => {
         <Education />
         <Publications />
         <PhotoGallery />
+        <Games />
       </main>
 
       <ViewModeToggle />

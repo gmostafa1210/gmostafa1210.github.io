@@ -1,4 +1,4 @@
-import { X, FileCode, FileJson, FileText, Terminal, Braces } from "lucide-react";
+import { X, FileCode, FileJson, FileText, Terminal, Braces, Gamepad2 } from "lucide-react";
 
 const fileIcons: Record<string, React.ReactNode> = {
   about: <FileCode size={14} className="syntax-tag" />,
@@ -7,6 +7,7 @@ const fileIcons: Record<string, React.ReactNode> = {
   education: <FileText size={14} className="syntax-variable" />,
   publications: <Braces size={14} className="syntax-number" />,
   contact: <Terminal size={14} className="syntax-string" />,
+  games: <Gamepad2 size={14} className="syntax-tag" />,
 };
 
 const fileNames: Record<string, string> = {
@@ -16,6 +17,7 @@ const fileNames: Record<string, string> = {
   education: "education.md",
   publications: "publications.bib",
   contact: "contact.sh",
+  games: "games.html",
 };
 
 interface TabBarProps {

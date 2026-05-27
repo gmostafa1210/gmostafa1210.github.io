@@ -9,6 +9,7 @@ import SkillsSection, { SKILLS_LINE_COUNT } from "./sections/SkillsSection";
 import EducationSection, { EDUCATION_LINE_COUNT } from "./sections/EducationSection";
 import PublicationsSection, { PUBLICATIONS_LINE_COUNT } from "./sections/PublicationsSection";
 import ContactSection, { CONTACT_LINE_COUNT } from "./sections/ContactSection";
+import GamesSection, { GAMES_LINE_COUNT } from "./sections/GamesSection";
 
 const sections: Record<string, { component: React.ReactNode; lines: number }> = {
   about: { component: <AboutSection />, lines: ABOUT_LINE_COUNT },
@@ -17,6 +18,7 @@ const sections: Record<string, { component: React.ReactNode; lines: number }> = 
   education: { component: <EducationSection />, lines: EDUCATION_LINE_COUNT },
   publications: { component: <PublicationsSection />, lines: PUBLICATIONS_LINE_COUNT },
   contact: { component: <ContactSection />, lines: CONTACT_LINE_COUNT },
+  games: { component: <GamesSection />, lines: GAMES_LINE_COUNT },
 };
 
 const IdeView = () => {

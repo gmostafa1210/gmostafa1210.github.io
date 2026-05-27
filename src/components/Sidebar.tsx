@@ -9,6 +9,7 @@ const navItems = [
   { label: "Education", href: "#education" },
   { label: "Publications", href: "#publications" },
   { label: "Photos", href: "#photos" },
+  { label: "Games", href: "#games" },
 ];
 
 const Sidebar = () => {
