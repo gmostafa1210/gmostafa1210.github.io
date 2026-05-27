@@ -199,23 +199,6 @@
     const myGuesses    = guesses.filter(g => g.by === myRole);
     const theirGuesses = guesses.filter(g => g.by !== myRole);
 
-    // Update top tracker
-    const trackerList = document.getElementById('tracker-list');
-    if (trackerList) {
-      trackerList.innerHTML = '';
-      if (myGuesses.length === 0) {
-        trackerList.innerHTML = '<span style="color:var(--muted);font-size:0.8rem">none yet</span>';
-      } else {
-        myGuesses.forEach(g => {
-          const chip = document.createElement('span');
-          chip.className = 'tracker-chip';
-          const hits = g.result.filter(r => r === '✓').length;
-          chip.textContent = `${g.number} (${hits}/${digits})`;
-          trackerList.appendChild(chip);
-        });
-      }
-    }
-
     const myCol    = document.getElementById('my-guesses-col');
     const theirCol = document.getElementById('their-guesses-col');
     if (!myCol || !theirCol) return;
@@ -546,38 +529,6 @@
   .turn-status.my-turn { background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.3); color: var(--accent); }
   .turn-status.their-turn { background: rgba(107,107,138,0.1); border: 1px solid var(--border); color: var(--muted); }
 
-  /* ── Your guesses tracker ── */
-  #my-guess-tracker {
-    width: 100%;
-    background: var(--surface);
-    border: 1px solid rgba(0,229,255,0.25);
-    border-radius: 10px;
-    padding: 8px 12px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .tracker-label {
-    font-family: var(--font-display);
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  #tracker-list { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
-  .tracker-chip {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--text);
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 2px 8px;
-  }
-
   /* ── Two-column guess board ── */
   #guess-board {
     width: 100%;
@@ -612,8 +563,8 @@
     top: 0;
     z-index: 1;
   }
-  .mine-header   { background: #0c1e22; color: var(--accent); }
-  .their-header  { background: #200c12; color: var(--accent2); }
+  .mine-header   { background: rgba(0,229,255,0.08); color: var(--accent); }
+  .their-header  { background: rgba(255,77,109,0.08); color: var(--accent2); }
 
   .board-col { display: flex; flex-direction: column; gap: 8px; padding: 10px 8px; }
 
@@ -779,11 +730,6 @@
   </div>
 
   <div class="turn-status their-turn" id="turn-status">Loading…</div>
-
-  <div id="my-guess-tracker">
-    <span class="tracker-label">YOUR GUESSES:</span>
-    <div id="tracker-list"><span style="color:var(--muted);font-size:0.8rem">none yet</span></div>
-  </div>
 
   <div id="guess-board">
     <div class="board-columns">
