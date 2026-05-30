@@ -1,10 +1,9 @@
-import { ExternalLink } from "lucide-react";
+import { Gamepad2, ExternalLink } from "lucide-react";
 
 const games = [
   {
     name: "NumDuel",
-    tagline: "Multiplayer number guessing duel",
-    description: "Crack your opponent's secret number before they crack yours. Create a room, share the code, and take turns guessing digit by digit.",
+    description: "A number guessing duel game. Challenge your mind against the clock!",
     href: "/game/NumDuel/numduel.html",
   },
 ];
@@ -15,30 +14,29 @@ const Games = () => {
       <div className="container max-w-4xl">
         <h2 className="section-heading">Games</h2>
 
-        <div className="space-y-0">
-          {games.map((game, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {games.map((game) => (
             <div
-              key={index}
-              className="timeline-item animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              key={game.name}
+              className="card-gradient rounded-xl p-6 flex flex-col gap-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in"
             >
-              <div className="timeline-dot" />
-              <div className="card-gradient rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">
-                  <h3 className="text-xl font-semibold text-foreground">{game.name}</h3>
-                  <a
-                    href={game.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-primary font-mono hover:underline transition-colors"
-                  >
-                    Play Now
-                    <ExternalLink size={14} />
-                  </a>
+              <div className="flex items-center gap-3">
+                <div className="p-3 rounded-full bg-primary/10 text-primary">
+                  <Gamepad2 size={24} />
                 </div>
-                <p className="text-muted-foreground text-sm mb-1">{game.tagline}</p>
-                <p className="text-muted-foreground">{game.description}</p>
+                <h3 className="text-lg font-semibold text-foreground">{game.name}</h3>
               </div>
+              <p className="text-muted-foreground text-sm">{game.description}</p>
+              <a
+                href={game.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity w-fit"
+              >
+                <Gamepad2 size={16} />
+                Play Now
+                <ExternalLink size={14} />
+              </a>
             </div>
           ))}
         </div>
