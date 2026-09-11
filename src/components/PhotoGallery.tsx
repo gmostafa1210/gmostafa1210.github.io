@@ -21,6 +21,7 @@ const photoSections = [
       "/files/img/2run/5runjan26.jpeg",
       "/files/img/2run/6runmay26.jpeg",
       "/files/img/2run/7runaug26.jpeg",
+      "/files/img/2run/8runsep26.jpeg",
     ],
   },
   {
