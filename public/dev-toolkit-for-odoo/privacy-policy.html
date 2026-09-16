@@ -8,14 +8,14 @@
   <style>
     :root {
       --plum: #714B67; --teal: #017E84; --ink: #1f2430; --muted: #5f6370; --line: #e4dfe3; --wash: #f7f4f6;
+      --bg: #ffffff; --th-ink: #ffffff;
       color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; }
-      body { background: #17141a; }
+      :root { --bg: #17141a; --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; --teal: #5cc8cd; --th-ink: #17141a; }
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #fff; }
+    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
     header { border-bottom: 4px solid var(--plum); background: var(--wash); }
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
     header .wrap { padding-top: 36px; padding-bottom: 28px; }
@@ -36,8 +36,7 @@
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
     th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
-    th { background: var(--plum); color: #fff; font-weight: 600; }
-    @media (prefers-color-scheme: dark) { th { color: #17141a; } }
+    th { background: var(--plum); color: var(--th-ink); font-weight: 600; }
     footer { border-top: 1px solid var(--line); padding: 20px 0 32px; color: var(--muted); font-size: 14px; }
   </style>
 </head>
