@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Dev Toolkit for Odoo</title>
+  <meta name="description" content="Privacy policy for the Dev Toolkit for Odoo Chrome extension by Golam Mostafa.">
+  <style>
+    :root {
+      --plum: #714B67; --teal: #017E84; --ink: #1f2430; --muted: #5f6370; --line: #e4dfe3; --wash: #f7f4f6;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; }
+      body { background: #17141a; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #fff; }
+    header { border-bottom: 4px solid var(--plum); background: var(--wash); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+    header .wrap { padding-top: 36px; padding-bottom: 28px; }
+    .eyebrow { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--plum); font-weight: 700; }
+    h1 { margin: 6px 0 8px; font-size: 32px; line-height: 1.2; }
+    .meta { margin: 0; color: var(--muted); font-size: 14px; }
+    main { padding: 28px 0 56px; }
+    h2 { margin: 36px 0 10px; font-size: 21px; color: var(--plum); }
+    h3 { margin: 22px 0 6px; font-size: 17px; }
+    p, li { max-width: 68ch; }
+    ul { padding-left: 22px; }
+    li { margin: 4px 0; }
+    code { font: 14px ui-monospace, Consolas, monospace; background: var(--wash); padding: 1px 5px; border-radius: 4px; }
+    a { color: var(--teal); }
+    .summary { border-left: 4px solid var(--teal); background: var(--wash); padding: 14px 18px; border-radius: 0 8px 8px 0; }
+    .summary p { margin: 0 0 6px; }
+    .summary ul { margin: 0; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    th { background: var(--plum); color: #fff; font-weight: 600; }
+    @media (prefers-color-scheme: dark) { th { color: #17141a; } }
+    footer { border-top: 1px solid var(--line); padding: 20px 0 32px; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Dev Toolkit for Odoo</p>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective date: 16 September 2026 &nbsp;|&nbsp; Developer: Golam Mostafa</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="summary">
+      <p><strong>In short:</strong></p>
+      <ul>
+        <li>The extension works entirely inside your browser.</li>
+        <li>It does not collect, sell or send your data to the developer or to any third party.</li>
+        <li>It has no analytics, advertising or tracking.</li>
+        <li>Screenshots, recordings and settings stay on your device until you download or delete them.</li>
+      </ul>
+    </div>
+
+    <h2>1. Who we are</h2>
+    <p>Dev Toolkit for Odoo ("the extension") is a Chrome extension developed and published by <strong>Golam Mostafa</strong>, an independent developer based in Dhaka, Bangladesh.</p>
+    <ul>
+      <li>Website: <a href="https://mostafa.bd">mostafa.bd</a></li>
+      <li>Email: <a href="mailto:gmostafa1210@gmail.com">gmostafa1210@gmail.com</a></li>
+    </ul>
+    <p>The extension is an independent project. It is not affiliated with, endorsed by or sponsored by Odoo S.A. or Anthropic PBC. "Odoo" and "Claude" are trademarks of their respective owners.</p>
+
+    <h2>2. What the extension does</h2>
+    <p>The extension helps Odoo developers with:</p>
+    <ul>
+      <li>switching Odoo debug modes</li>
+      <li>simulating barcode scans</li>
+      <li>inspecting OWL components in DevTools</li>
+      <li>taking and annotating screenshots</li>
+      <li>recording the screen</li>
+      <li>showing Odoo record details</li>
+      <li>optionally, showing your own Claude plan usage</li>
+    </ul>
+
+    <h2>3. Data the extension handles</h2>
+    <p>All processing happens locally in your browser. The table below lists everything the extension touches and where it stays.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Why</th><th>Where it is kept</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Content of the current page (Odoo version, debug mode, model, record ID, page URL)</td>
+            <td>Show record info, switch debug mode, send simulated barcodes</td>
+            <td>Read on demand when you open the popup. Not stored.</td>
+          </tr>
+          <tr>
+            <td>Screenshots and your annotations</td>
+            <td>Screenshot and editor feature</td>
+            <td>Your browser's local storage (IndexedDB). Only the latest capture is kept.</td>
+          </tr>
+          <tr>
+            <td>Screen, tab and microphone recordings</td>
+            <td>Screen recording feature</td>
+            <td>Your browser's local storage (IndexedDB). Only the latest recording is kept.</td>
+          </tr>
+          <tr>
+            <td>Click positions in the recorded tab</td>
+            <td>Draw click highlight rings in recordings</td>
+            <td>Used in the moment to draw a ring. Not stored.</td>
+          </tr>
+          <tr>
+            <td>Saved barcodes, delays and other settings</td>
+            <td>Remember your preferences</td>
+            <td>Chrome extension storage on your device</td>
+          </tr>
+          <tr>
+            <td>Claude plan usage percentages and reset times (optional)</td>
+            <td>Claude Usage meter in the popup</td>
+            <td>Read from claude.ai with your existing sign-in. The last values are cached on your device.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>What the extension never does</h3>
+    <ul>
+      <li>It does not send any data to the developer or to any server operated by the developer.</li>
+      <li>It does not sell, rent or share data with third parties.</li>
+      <li>It does not use data for advertising, profiling or creditworthiness purposes.</li>
+      <li>It does not read, store or transmit passwords, cookies or login tokens.</li>
+      <li>It does not load or run remote code.</li>
+      <li>It does not include analytics or tracking.</li>
+    </ul>
+
+    <h2>4. Screen recording and microphone</h2>
+    <ul>
+      <li>Recording starts only after you click <strong>Start recording</strong>.</li>
+      <li>Screen, window and tab sharing always goes through Chrome's own picker or indicator.</li>
+      <li>The microphone is used only while a recording is running, and only after you allow it in Chrome.</li>
+      <li>Recordings are saved in your browser and leave your device only if you download and share them yourself.</li>
+    </ul>
+
+    <h2>5. Claude Usage meter (optional)</h2>
+    <p>This feature is off until you click <strong>Show Claude usage</strong> and allow access to <code>claude.ai</code> in Chrome's permission prompt.</p>
+    <ul>
+      <li><strong>What it reads:</strong> the usage percentages and reset times shown on claude.ai's Settings &gt; Usage page, using the session you are already signed in with.</li>
+      <li><strong>Where the data goes:</strong> the request goes only from your browser to claude.ai. The values are shown in the popup and cached on your device.</li>
+      <li><strong>Turning it off:</strong> click <strong>Hide Claude usage</strong> to delete the cached values and remove the <code>claude.ai</code> permission.</li>
+    </ul>
+    <p>Your use of claude.ai is governed by Anthropic's own privacy policy.</p>
+
+    <h2>6. Permissions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><code>activeTab</code></td><td>Access the current tab only after you click the extension or use its keyboard shortcut</td></tr>
+          <tr><td><code>scripting</code></td><td>Read Odoo page details, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
+          <tr><td><code>storage</code></td><td>Save your settings, saved barcodes and recording status on your device</td></tr>
+          <tr><td><code>tabCapture</code></td><td>Record the current tab when you start a tab recording</td></tr>
+          <tr><td><code>https://claude.ai/*</code> (optional)</td><td>Read your Claude plan usage, only after you enable the Claude Usage meter</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>7. Data retention and deletion</h2>
+    <ul>
+      <li>Only the latest screenshot and the latest recording are stored. Each new capture replaces the previous one.</li>
+      <li>You can delete all extension data at any time by removing the extension from Chrome (<code>chrome://extensions</code>).</li>
+      <li>You can also clear it through Chrome's site data settings.</li>
+    </ul>
+
+    <h2>8. Children</h2>
+    <p>The extension is a developer tool and is not directed at children under 13.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published on this page with a new effective date. Significant changes will also be noted in the extension's Chrome Web Store listing.</p>
+
+    <h2>10. Contact</h2>
+    <p>For questions or requests about this policy, contact <strong>Golam Mostafa</strong>:</p>
+    <ul>
+      <li>Email: <a href="mailto:gmostafa1210@gmail.com">gmostafa1210@gmail.com</a></li>
+      <li>Website: <a href="https://mostafa.bd">mostafa.bd</a></li>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Golam Mostafa. Dev Toolkit for Odoo is not affiliated with Odoo S.A. or Anthropic PBC.</div>
+  </footer>
+</body>
+</html>
