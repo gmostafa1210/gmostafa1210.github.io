@@ -64,7 +64,7 @@
     <h2>1. Who we are</h2>
     <p>Dev Toolkit for Odoo ("the extension") is a Chrome extension developed and published by <strong>Golam Mostafa</strong>, an independent developer based in Dhaka, Bangladesh.</p>
     <ul>
-      <li>Website: <a href="https://mostafa.bd">mostafa.bd</a></li>
+      <li>Website: <a href="https://gmostafa1210.github.io">gmostafa1210.github.io</a></li>
       <li>Email: <a href="mailto:gmostafa1210@gmail.com">gmostafa1210@gmail.com</a></li>
     </ul>
     <p>The extension is an independent project. It is not affiliated with, endorsed by or sponsored by Odoo S.A. or Anthropic PBC. "Odoo" and "Claude" are trademarks of their respective owners.</p>
@@ -78,6 +78,8 @@
       <li>taking and annotating screenshots</li>
       <li>recording the screen</li>
       <li>showing Odoo record details</li>
+      <li>copying Odoo technical field details, exporting field lists, building domains and comparing records</li>
+      <li>inspecting the technologies, performance, SEO and security headers of other websites</li>
       <li>optionally, showing your own Claude plan usage</li>
     </ul>
 
@@ -93,6 +95,26 @@
             <td>Content of the current page (Odoo version, debug mode, model, record ID, page URL)</td>
             <td>Show record info, switch debug mode, send simulated barcodes</td>
             <td>Read on demand when you open the popup. Not stored.</td>
+          </tr>
+          <tr>
+            <td>Website details of the current page (detected technologies, SEO tags, performance timings, response headers)</td>
+            <td>Website inspector in the Info tab</td>
+            <td>Read on demand when you open the popup, by looking at the page and repeating one request to the same page. Not stored or sent anywhere.</td>
+          </tr>
+          <tr>
+            <td>Odoo field definitions and record values of the Odoo site you are using</td>
+            <td>Field export, domain builder and record comparison in the Dev tab</td>
+            <td>Read through your existing Odoo session only when you use these tools. Exports are saved as files you download. Two compared records (A and B) are kept on your device until you reset them.</td>
+          </tr>
+          <tr>
+            <td>Technical tooltip values (field name, model, type, context, domain and similar)</td>
+            <td>Field inspector card</td>
+            <td>Shown on the page while you work. Not stored unless you copy a value.</td>
+          </tr>
+          <tr>
+            <td>Values you copy with the extension</td>
+            <td>Copy history in the Dev tab</td>
+            <td>Chrome extension storage on your device, up to the last 100 values. You can clear it at any time.</td>
           </tr>
           <tr>
             <td>Screenshots and your annotations</td>
@@ -156,9 +178,10 @@
         <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
         <tbody>
           <tr><td><code>activeTab</code></td><td>Access the current tab only after you click the extension or use its keyboard shortcut</td></tr>
-          <tr><td><code>scripting</code></td><td>Read Odoo page details, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
+          <tr><td><code>scripting</code></td><td>Read Odoo page details, inspect the current website, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
           <tr><td><code>storage</code></td><td>Save your settings, saved barcodes and recording status on your device</td></tr>
           <tr><td><code>tabCapture</code></td><td>Record the current tab when you start a tab recording</td></tr>
+          <tr><td><code>http://*/*</code>, <code>https://*/*</code> (optional, per site)</td><td>Only for the Odoo sites you approve with "Allow this site", so the Field inspector starts on every page load. Removed with "Turn off".</td></tr>
           <tr><td><code>https://claude.ai/*</code> (optional)</td><td>Read your Claude plan usage, only after you enable the Claude Usage meter</td></tr>
         </tbody>
       </table>
@@ -167,6 +190,7 @@
     <h2>7. Data retention and deletion</h2>
     <ul>
       <li>Only the latest screenshot and the latest recording are stored. Each new capture replaces the previous one.</li>
+      <li>Copy history keeps at most 100 values and can be cleared in the Dev tab.</li>
       <li>You can delete all extension data at any time by removing the extension from Chrome (<code>chrome://extensions</code>).</li>
       <li>You can also clear it through Chrome's site data settings.</li>
     </ul>
@@ -181,7 +205,7 @@
     <p>For questions or requests about this policy, contact <strong>Golam Mostafa</strong>:</p>
     <ul>
       <li>Email: <a href="mailto:gmostafa1210@gmail.com">gmostafa1210@gmail.com</a></li>
-      <li>Website: <a href="https://mostafa.bd">mostafa.bd</a></li>
+      <li>Website: <a href="https://gmostafa1210.github.io">gmostafa1210.github.io</a></li>
     </ul>
   </main>
 
