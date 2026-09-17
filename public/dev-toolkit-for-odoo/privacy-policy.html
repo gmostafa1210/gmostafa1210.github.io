@@ -7,38 +7,59 @@
   <meta name="description" content="Privacy policy for the Dev Toolkit for Odoo Chrome extension by Golam Mostafa.">
   <style>
     :root {
-      --plum: #714B67; --teal: #017E84; --ink: #1f2430; --muted: #5f6370; --line: #e4dfe3; --wash: #f7f4f6;
+      --plum: #714B67; --teal: #01696e; --ink: #1f2430; --muted: #555a66; --line: #e4dfe3; --wash: #f7f4f6;
+      --bg: #ffffff; --th-ink: #ffffff;
       color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; }
-      body { background: #17141a; }
+      :root {
+        --bg: #17141a; --ink: #e8e6ea; --muted: #b3b0ba; --line: #3a3540; --wash: #221d25;
+        --plum: #d3a9c8; --teal: #6fd3d8; --th-ink: #17141a;
+      }
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #fff; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; font: 17px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
     header { border-bottom: 4px solid var(--plum); background: var(--wash); }
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
     header .wrap { padding-top: 36px; padding-bottom: 28px; }
     .eyebrow { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--plum); font-weight: 700; }
     h1 { margin: 6px 0 8px; font-size: 32px; line-height: 1.2; }
-    .meta { margin: 0; color: var(--muted); font-size: 14px; }
-    main { padding: 28px 0 56px; }
-    h2 { margin: 36px 0 10px; font-size: 21px; color: var(--plum); }
-    h3 { margin: 22px 0 6px; font-size: 17px; }
+    .meta { margin: 0; color: var(--muted); font-size: 15px; }
+    main.wrap { padding-top: 32px; padding-bottom: 56px; }
+    h2 { margin: 44px 0 12px; padding-bottom: 6px; font-size: 22px; line-height: 1.3; color: var(--plum); border-bottom: 1px solid var(--line); }
+    h3 { margin: 26px 0 8px; font-size: 18px; }
     p, li { max-width: 68ch; }
-    ul { padding-left: 22px; }
-    li { margin: 4px 0; }
-    code { font: 14px ui-monospace, Consolas, monospace; background: var(--wash); padding: 1px 5px; border-radius: 4px; }
-    a { color: var(--teal); }
-    .summary { border-left: 4px solid var(--teal); background: var(--wash); padding: 14px 18px; border-radius: 0 8px 8px 0; }
+    p { margin: 0 0 14px; }
+    ul { padding-left: 22px; margin: 0 0 14px; }
+    li { margin: 6px 0; }
+    code { font: 0.88em ui-monospace, Consolas, monospace; background: var(--wash); border: 1px solid var(--line); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+    a { color: var(--teal); text-underline-offset: 2px; }
+    .summary { border-left: 4px solid var(--teal); background: var(--wash); padding: 16px 20px; border-radius: 0 8px 8px 0; }
     .summary p { margin: 0 0 6px; }
     .summary ul { margin: 0; }
     .table-wrap { overflow-x: auto; }
-    table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
-    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
-    th { background: var(--plum); color: #fff; font-weight: 600; }
-    @media (prefers-color-scheme: dark) { th { color: #17141a; } }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 15px; line-height: 1.55; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+    th { background: var(--plum); color: var(--th-ink); font-weight: 600; }
+    tbody tr:nth-child(even) td { background: var(--wash); }
+    td:first-child { font-weight: 600; }
     footer { border-top: 1px solid var(--line); padding: 20px 0 32px; color: var(--muted); font-size: 14px; }
+
+    /* Phones: turn table rows into labelled cards */
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      .wrap { padding: 0 16px; }
+      h1 { font-size: 27px; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      tr { border: 1px solid var(--line); border-radius: 8px; margin: 0 0 12px; overflow: hidden; }
+      td { border-bottom: 1px solid var(--line); background: none !important; }
+      td:last-child { border-bottom: 0; }
+      td:first-child { background: var(--wash) !important; }
+      td[data-label]::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--plum); margin-bottom: 2px; }
+      td:first-child[data-label]::before { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -92,69 +113,69 @@
         </thead>
         <tbody>
           <tr>
-            <td>Content of the current page (Odoo version, debug mode, model, record ID, page URL)</td>
-            <td>Show record info, switch debug mode, send simulated barcodes</td>
-            <td>Read on demand when you open the popup. Not stored.</td>
+            <td data-label="Data">Content of the current page (Odoo version, debug mode, model, record ID, page URL)</td>
+            <td data-label="Why">Show record info, switch debug mode, send simulated barcodes</td>
+            <td data-label="Where it is kept">Read on demand when you open the popup. Not stored.</td>
           </tr>
           <tr>
-            <td>Website details of the current page (detected technologies, SEO tags, performance timings, response headers)</td>
-            <td>Website inspector in the Info tab</td>
-            <td>Read on demand when you open the popup, by looking at the page and repeating one request to the same page. Not stored or sent anywhere.</td>
+            <td data-label="Data">Website details of the current page (detected technologies, SEO tags, performance timings, response headers)</td>
+            <td data-label="Why">Website inspector in the Info tab</td>
+            <td data-label="Where it is kept">Read on demand when you open the popup, by looking at the page and repeating one request to the same page. Not stored or sent anywhere.</td>
           </tr>
           <tr>
-            <td>Odoo field definitions and record values of the Odoo site you are using</td>
-            <td>Field export, domain builder and record comparison in the Dev tab</td>
-            <td>Read through your existing Odoo session only when you use these tools. Exports are saved as files you download. Two compared records (A and B) are kept on your device until you reset them.</td>
+            <td data-label="Data">Odoo field definitions and record values of the Odoo site you are using</td>
+            <td data-label="Why">Field export, domain builder and record comparison in the Dev tab</td>
+            <td data-label="Where it is kept">Read through your existing Odoo session only when you use these tools. Exports are saved as files you download. Two compared records (A and B) are kept on your device until you reset them.</td>
           </tr>
           <tr>
-            <td>Technical tooltip values (field name, model, type, context, domain and similar)</td>
-            <td>Field inspector card</td>
-            <td>Shown on the page while you work. Not stored unless you copy a value.</td>
+            <td data-label="Data">Technical tooltip values (field name, model, type, context, domain and similar)</td>
+            <td data-label="Why">Field inspector card</td>
+            <td data-label="Where it is kept">Shown on the page while you work. Not stored unless you copy a value.</td>
           </tr>
           <tr>
-            <td>Values you copy with the extension</td>
-            <td>Copy history in the Dev tab</td>
-            <td>Chrome extension storage on your device, up to the last 100 values. You can clear it at any time.</td>
+            <td data-label="Data">Values you copy with the extension</td>
+            <td data-label="Why">Copy history in the Dev tab</td>
+            <td data-label="Where it is kept">Chrome extension storage on your device, up to the last 100 values. You can clear it at any time.</td>
           </tr>
           <tr>
-            <td>Screenshots and your annotations</td>
-            <td>Screenshot and editor feature</td>
-            <td>Your browser's local storage (IndexedDB). Only the latest capture is kept.</td>
+            <td data-label="Data">Screenshots and your annotations</td>
+            <td data-label="Why">Screenshot and editor feature</td>
+            <td data-label="Where it is kept">Your browser's local storage (IndexedDB). Only the latest capture is kept.</td>
           </tr>
           <tr>
-            <td>Screen, tab and microphone recordings</td>
-            <td>Screen recording feature</td>
-            <td>Your browser's local storage (IndexedDB). Only the latest recording is kept.</td>
+            <td data-label="Data">Screen, tab and microphone recordings</td>
+            <td data-label="Why">Screen recording feature</td>
+            <td data-label="Where it is kept">Your browser's local storage (IndexedDB). Only the latest recording is kept.</td>
           </tr>
           <tr>
-            <td>Camera image or pictures you choose, for barcode reading (optional)</td>
-            <td>Barcode scanner window</td>
-            <td>Read on your device to find barcodes. Nothing is stored except the barcode values you choose to save, and nothing is uploaded.</td>
+            <td data-label="Data">Camera image or pictures you choose, for barcode reading (optional)</td>
+            <td data-label="Why">Barcode scanner window</td>
+            <td data-label="Where it is kept">Read on your device to find barcodes. Nothing is stored except the barcode values you choose to save, and nothing is uploaded.</td>
           </tr>
           <tr>
-            <td>Camera image (optional)</td>
-            <td>Camera bubble in screen recordings</td>
-            <td>Only during a recording you started with the camera option on. Stored only inside the recording on your device.</td>
+            <td data-label="Data">Camera image (optional)</td>
+            <td data-label="Why">Camera bubble in screen recordings</td>
+            <td data-label="Where it is kept">Only during a recording you started with the camera option on. Stored only inside the recording on your device.</td>
           </tr>
           <tr>
-            <td>Debug mode of the current Odoo tab, and (optional) the addresses of open tabs</td>
-            <td>Toolbar icon color</td>
-            <td>Read from the page address or page and used only to choose the icon. With "Turn on for all tabs", tab addresses are checked on your device for the <code>debug=</code> value. Nothing is stored or sent anywhere.</td>
+            <td data-label="Data">Debug mode of the current Odoo tab, and (optional) the addresses of open tabs</td>
+            <td data-label="Why">Toolbar icon color</td>
+            <td data-label="Where it is kept">Read from the page address or page and used only to choose the icon. With "Turn on for all tabs", tab addresses are checked on your device for the <code>debug=</code> value. Nothing is stored or sent anywhere.</td>
           </tr>
           <tr>
-            <td>Click positions in the recorded tab</td>
-            <td>Draw click highlight rings in recordings</td>
-            <td>Used in the moment to draw a ring. Not stored.</td>
+            <td data-label="Data">Click positions in the recorded tab</td>
+            <td data-label="Why">Draw click highlight rings in recordings</td>
+            <td data-label="Where it is kept">Used in the moment to draw a ring. Not stored.</td>
           </tr>
           <tr>
-            <td>Saved barcodes, delays and other settings</td>
-            <td>Remember your preferences</td>
-            <td>Chrome extension storage on your device</td>
+            <td data-label="Data">Saved barcodes, delays and other settings</td>
+            <td data-label="Why">Remember your preferences</td>
+            <td data-label="Where it is kept">Chrome extension storage on your device</td>
           </tr>
           <tr>
-            <td>Claude plan usage percentages and reset times (optional)</td>
-            <td>Claude Usage meter in the popup</td>
-            <td>Read from claude.ai with your existing sign-in. The last values are cached on your device.</td>
+            <td data-label="Data">Claude plan usage percentages and reset times (optional)</td>
+            <td data-label="Why">Claude Usage meter in the popup</td>
+            <td data-label="Where it is kept">Read from claude.ai with your existing sign-in. The last values are cached on your device.</td>
           </tr>
         </tbody>
       </table>
@@ -194,13 +215,13 @@
       <table>
         <thead><tr><th>Permission</th><th>Used for</th></tr></thead>
         <tbody>
-          <tr><td><code>activeTab</code></td><td>Access the current tab only after you click the extension or use its keyboard shortcut</td></tr>
-          <tr><td><code>scripting</code></td><td>Read Odoo page details, inspect the current website, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
-          <tr><td><code>storage</code></td><td>Save your settings, saved barcodes and recording status on your device</td></tr>
-          <tr><td><code>tabCapture</code></td><td>Record the current tab when you start a tab recording</td></tr>
-          <tr><td><code>tabs</code> (optional)</td><td>Only after you click "Turn on for all tabs": reads tab addresses to show the debug mode color on every Odoo tab. Removed with "Turn off".</td></tr>
-          <tr><td><code>http://*/*</code>, <code>https://*/*</code> (optional, per site)</td><td>Only for the Odoo sites you approve with "Allow this site", so the Field inspector starts on every page load. Removed with "Turn off".</td></tr>
-          <tr><td><code>https://claude.ai/*</code> (optional)</td><td>Read your Claude plan usage, only after you enable the Claude Usage meter</td></tr>
+          <tr><td data-label="Permission"><code>activeTab</code></td><td data-label="Used for">Access the current tab only after you click the extension or use its keyboard shortcut</td></tr>
+          <tr><td data-label="Permission"><code>scripting</code></td><td data-label="Used for">Read Odoo page details, inspect the current website, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
+          <tr><td data-label="Permission"><code>storage</code></td><td data-label="Used for">Save your settings, saved barcodes and recording status on your device</td></tr>
+          <tr><td data-label="Permission"><code>tabCapture</code></td><td data-label="Used for">Record the current tab when you start a tab recording</td></tr>
+          <tr><td data-label="Permission"><code>tabs</code> (optional)</td><td data-label="Used for">Only after you click "Turn on for all tabs": reads tab addresses to show the debug mode color on every Odoo tab. Removed with "Turn off".</td></tr>
+          <tr><td data-label="Permission"><code>http://*/*</code>, <code>https://*/*</code> (optional, per site)</td><td data-label="Used for">Only for the Odoo sites you approve with "Allow this site", so the Field inspector starts on every page load. Removed with "Turn off".</td></tr>
+          <tr><td data-label="Permission"><code>https://claude.ai/*</code> (optional)</td><td data-label="Used for">Read your Claude plan usage, only after you enable the Claude Usage meter</td></tr>
         </tbody>
       </table>
     </div>
