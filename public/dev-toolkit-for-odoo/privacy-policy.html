@@ -8,14 +8,14 @@
   <style>
     :root {
       --plum: #714B67; --teal: #017E84; --ink: #1f2430; --muted: #5f6370; --line: #e4dfe3; --wash: #f7f4f6;
-      --bg: #ffffff; --th-ink: #ffffff;
       color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #17141a; --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; --teal: #5cc8cd; --th-ink: #17141a; }
+      :root { --ink: #e8e6ea; --muted: #a9a6b0; --line: #3a3540; --wash: #221d25; --plum: #c89bbd; }
+      body { background: #17141a; }
     }
     * { box-sizing: border-box; }
-    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+    body { margin: 0; font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: #fff; }
     header { border-bottom: 4px solid var(--plum); background: var(--wash); }
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
     header .wrap { padding-top: 36px; padding-bottom: 28px; }
@@ -36,7 +36,8 @@
     .table-wrap { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 15px; }
     th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
-    th { background: var(--plum); color: var(--th-ink); font-weight: 600; }
+    th { background: var(--plum); color: #fff; font-weight: 600; }
+    @media (prefers-color-scheme: dark) { th { color: #17141a; } }
     footer { border-top: 1px solid var(--line); padding: 20px 0 32px; color: var(--muted); font-size: 14px; }
   </style>
 </head>
@@ -126,6 +127,21 @@
             <td>Your browser's local storage (IndexedDB). Only the latest recording is kept.</td>
           </tr>
           <tr>
+            <td>Camera image or pictures you choose, for barcode reading (optional)</td>
+            <td>Barcode scanner window</td>
+            <td>Read on your device to find barcodes. Nothing is stored except the barcode values you choose to save, and nothing is uploaded.</td>
+          </tr>
+          <tr>
+            <td>Camera image (optional)</td>
+            <td>Camera bubble in screen recordings</td>
+            <td>Only during a recording you started with the camera option on. Stored only inside the recording on your device.</td>
+          </tr>
+          <tr>
+            <td>Debug mode of the current Odoo tab, and (optional) the addresses of open tabs</td>
+            <td>Toolbar icon color</td>
+            <td>Read from the page address or page and used only to choose the icon. With "Turn on for all tabs", tab addresses are checked on your device for the <code>debug=</code> value. Nothing is stored or sent anywhere.</td>
+          </tr>
+          <tr>
             <td>Click positions in the recorded tab</td>
             <td>Draw click highlight rings in recordings</td>
             <td>Used in the moment to draw a ring. Not stored.</td>
@@ -158,7 +174,9 @@
     <ul>
       <li>Recording starts only after you click <strong>Start recording</strong>.</li>
       <li>Screen, window and tab sharing always goes through Chrome's own picker or indicator.</li>
-      <li>The microphone is used only while a recording is running, and only after you allow it in Chrome.</li>
+      <li>The microphone and camera are used only while a recording is running, only when you turned them on in the Video tab, and only after you allow them in Chrome.</li>
+      <li>The barcode scanner uses the camera only while its window is open and set to Camera. You can close the window at any time.</li>
+      <li>The camera image is drawn into the recording on your device. It is never sent anywhere.</li>
       <li>Recordings are saved in your browser and leave your device only if you download and share them yourself.</li>
     </ul>
 
@@ -180,6 +198,7 @@
           <tr><td><code>scripting</code></td><td>Read Odoo page details, inspect the current website, switch debug mode, send simulated barcodes, scroll the page for full page screenshots, draw click highlights</td></tr>
           <tr><td><code>storage</code></td><td>Save your settings, saved barcodes and recording status on your device</td></tr>
           <tr><td><code>tabCapture</code></td><td>Record the current tab when you start a tab recording</td></tr>
+          <tr><td><code>tabs</code> (optional)</td><td>Only after you click "Turn on for all tabs": reads tab addresses to show the debug mode color on every Odoo tab. Removed with "Turn off".</td></tr>
           <tr><td><code>http://*/*</code>, <code>https://*/*</code> (optional, per site)</td><td>Only for the Odoo sites you approve with "Allow this site", so the Field inspector starts on every page load. Removed with "Turn off".</td></tr>
           <tr><td><code>https://claude.ai/*</code> (optional)</td><td>Read your Claude plan usage, only after you enable the Claude Usage meter</td></tr>
         </tbody>
